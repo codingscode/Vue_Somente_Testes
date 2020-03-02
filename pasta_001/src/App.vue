@@ -1,7 +1,10 @@
 <template>
    <div id="app">
-       {{estados}}
-       <button @click="usar">alterar</button>
+       <div v-for="item in estados" :key="item">
+		   {{item.dizer}}
+
+	   </div>
+       <!--<button @click="usar">alterar</button>-->
    </div>
 </template>
 
@@ -10,9 +13,9 @@ export default {
 	name: 'app',
 	data() {
 		return {
-			estados : ['sp', 'rj', 'mg', 'sc', 'rs']
+			estados : [{dizer: 'olá'}, 'sp', 'rj', 'mg', {dizer: 'como vai...'}, 'rs']
 		}
-	},
+    },
 	methods: {
 		usar() {
 			this.estados = 'mudou'
