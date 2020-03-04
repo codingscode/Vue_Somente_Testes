@@ -1,23 +1,21 @@
 <template>
      <div>
-         <div>
-            {{numero}}
-         </div>
-         <button @click="adicionar">adicionar</button>
+           <div v-for="cor in cores" :key="cor.id">
+              {{cor.id}}: {{cor.cor}} - {{cor.significado}} 
+           </div>
      </div>
 </template>
 
 <script>
 export default {
+    props: {cores: Array},
     data() {
         return {
-             numero: 0
+            cor: null
         }
     },
     methods: {
-        adicionar() {
-            this.numero += 1
-        }
+       
     }
 }
 </script>
