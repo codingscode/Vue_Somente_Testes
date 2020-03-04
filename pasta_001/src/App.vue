@@ -1,26 +1,19 @@
 <template>
    <div id="app">
-       <div v-for="item in estados" :key="item">
-		   {{item.dizer}}
-
-	   </div>
-       <!--<button @click="usar">alterar</button>-->
+       <inicio></inicio>
+       <inicio></inicio>
+       <inicio></inicio>
+       <inicio></inicio>
    </div>
 </template>
 
 <script>
+import Inicio from './components/Inicio'
+
 export default {
 	name: 'app',
-	data() {
-		return {
-			estados : [{dizer: 'olá'}, 'sp', 'rj', 'mg', {dizer: 'como vai...'}, 'rs']
-		}
-    },
-	methods: {
-		usar() {
-			this.estados = 'mudou'
-		}
-	}
+	components: {Inicio}
+	
 }
 </script>
 
